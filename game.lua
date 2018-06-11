@@ -113,6 +113,11 @@ function coll(event)
 			display.remove(event.other)
 		elseif(event.target.name == "player" and event.other.name == "coin")then
 			--score points
+			if(force.width > 29*3)then
+				transition.to(force,{time = 200, width = 29*4})
+			else
+				transition.to(force,{time = 200, width = force.width+(29/5)})
+			end
 		elseif(event.target.name == "coin")then
 			display.remove(event.target)
 		end
