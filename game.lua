@@ -1,6 +1,7 @@
 local composer = require "composer"
 local sceneName = ...
 local scene = composer.newScene(sceneName)
+local background = require "background"
 
 local w = display.contentCenterX
 local h = display.contentCenterY
@@ -25,6 +26,12 @@ local t
 local bounceCount = 0
 local bounceTimer = 4
 local bounceState = false 
+local coinSpawnTimer
+local coinSpawnVelocity = -70
+local coinTimer
+
+local sineTimer = 0
+
 
 --ground boundary that detects when disk falls offscreen on the bottom
 local bottomWall
@@ -104,18 +111,14 @@ function coll(event)
 				transition.to(force,{time = 200, width = force.width+29})
 			end
 			display.remove(event.other)
+		elseif(event.target.name == "player" and event.other.name == "coin")then
+			--score points
+		elseif(event.target.name == "coin")then
+			display.remove(event.target)
 		end
 	end
 end
---paralax scroll
-function scroll(object,speed,limit)
-	local max = (object.width/2)*-1
-	if(object.x < max+limit)then
-		object.x = w_*2
-	else
-		object.x = object.x - speed
-	end
-end
+
 
 function createPlatforms()
 
@@ -223,6 +226,37 @@ function createFloaters()
 	end
 end
 
+function createCoin(velocity,height)
+	local coin = display.newImage("images/coin.png",w_+15,height)
+
+	if(sineTimer >= ((math.pi/2)*10))then
+		sineTimer = 0 
+	end
+	sineTimer = sineTimer +(math.pi/2)
+
+	coin.y = f(sineTimer)
+	print(sineTimer..","..coin.y)
+
+	coin:scale(0.30,0.30)
+	physics.addBody(coin,"kinematic",{radius = 5})
+	coin:setLinearVelocity(velocity,0)
+	
+	coin.name = "coin"
+	coin:addEventListener("collision",coll)
+	bin[#bin+1] = coin
+end
+
+function f(x)
+	math.randomseed(os.time())
+	local frequency = math.random()
+	local height = math.random(30,40)
+	return math.round(height*math.cos(x*frequency)+(h_/3))
+end
+
+function spawnCoins()
+	createCoin(-70,h)
+end
+
 function playerTouch(e)
 	if(force.width > 0)then
 		player:applyLinearImpulse(0,-3.0)
@@ -295,11 +329,11 @@ function scene:create(event)
 end
 --this function is called iteratively every few frames
 function checkFrame()
-	scroll(cloud1,2,-50)
-	scroll(cloud2,2,-50)
-	scroll(bg1,1,-10)
-	scroll(bg2,1,-10)
-	scroll(bg3,1,-10)
+	background.scroll(cloud1,2,-50)
+	background.scroll(cloud2,2,-50)
+	background.scroll(bg1,1,-10)
+	background.scroll(bg2,1,-10)
+	background.scroll(bg3,1,-10)
 	--fix player at center of screen
 	player.x = w
 	bounceTimer_text.y = player.y - 50
@@ -311,7 +345,9 @@ function scene:show(event)
 	if(event.phase == "will")then
 		spawnPlatforms = timer.performWithDelay(18000,createPlatforms,0)
 		spawnFloaters = timer.performWithDelay(10000,createFloaters,0)
-		startBounce = timer.performWithDelay(1000,bounce,0)
+		startBounce = timer.performWithDelay(3000,bounce,0)
+
+		coinTimer = timer.performWithDelay(1000,spawnCoins,0)
 
 		physics.addBody(wall, {isSensor = true})
 		wall.gravityScale = 0
@@ -331,6 +367,7 @@ function scene:hide(event)
 		timer.cancel(spawnPlatforms)
 		timer.cancel(spawnFloaters)
 		timer.cancel(t)
+		timer.cancel(coinTimer)
 		cleanUp()
 	elseif(event.phase == "did")then
 		Runtime:removeEventListener("enterFrame",checkFrame)

@@ -1,2 +1,2 @@
 local composer = require("composer")
-composer.gotoScene("game")
+composer.gotoScene("menu")
