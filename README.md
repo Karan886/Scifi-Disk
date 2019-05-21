@@ -10,7 +10,6 @@
 <li>collecting health boxes that appear on the bricked platforms.</li>
 <li>bouncing on rooftop platforms <em><b>3 times</b></em> in <em><b>3 seconds.</b></em></li>
 </ol>
-<li>Option 2 is preferred because there are more rooftop platforms than health boxes.</li>
 </ul>
 
 <hr/>
