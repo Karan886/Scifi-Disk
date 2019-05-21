@@ -17,10 +17,7 @@
 
 <h2>Demos and Screenshots</h2>
 <div>
-<img width="390px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-12.png"/>
-</div>
-<div align="right">
-<img width="380px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-27.png"></img> 
+<img align="center" width="390px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-12.png"/>
 </div>
 
 <hr/>
