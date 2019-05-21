@@ -17,7 +17,12 @@
 
 <h2>Demos and Screenshots</h2>
 <div>
-<img align="center" width="390px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-12.png"/>
+<img width="390px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-12.png" alt="Oops screen shot was not found. Sorry about that."/>
+<br/>
+<ul>
+<li><dfn><b>Bounce Counter: </b></dfn> a green circle that appears below the <em><b>disk</b></em> that tells the player how many times the disk has bounced - <em>by shifting position along the disk as more bounces are accumulated.</em>
+</li>
+</ul>
 </div>
 
 <hr/>
@@ -32,6 +37,7 @@ Open Corona SDK (you may have to make a <em>free account</em>) and select the <s
 <li>Navigate to <strong>./main.lua</strong> this will fire up the <em><b>Corona Simulator</b></em>, and you can test the game.</li>
 <li>Since this app is developed for android devices, please make sure that your hardware is set to an android device. You can do this by navigating to the toolbar and select <em><b>Window > View As >..."</b></em></li>
 </ol>
+
 
 <hr/>
 
