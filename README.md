@@ -23,14 +23,14 @@
 Open Corona SDK (you may have to make a <em>free account</em>) and select the <strong>Open Project</strong> option.
 </li>
 <li>Navigate to <strong>./main.lua</strong> this will fire up the <em><b>Corona Simulator</b></em>, and you can test the game.</li>
-<li>Since this app is developed for android devices, please make sure that your hardware is set to an android device. You can do this by navigating to the toolbar and select <em><b>Window > View As > <Android Device>"</b></em></li>
+<li>Since this app is developed for android devices, please make sure that your hardware is set to an android device. You can do this by navigating to the toolbar and select <em><b>Window > View As >..."</b></em></li>
 </ol>
 
 <hr/>
 
 <h2>Notes</h2>
 <ul>
-<li>An <em>alpha test</em> reveals that the game interface is sometimes <em>bland</em> - More visuals and artworks need to be introduced.</li>
+<li>An <em>alpha test</em> reveals that the game interface is sometimes <em>bland</em> - More visuals and <b>artworks</b> need to be introduced.</li>
 <li>
 A traditional coin collection mechanism can serve as a solution to the the <em>bland</em> game interface. However, This component is considered as a last resort - just because it is very <em>common</em> in other games.
 </li>
