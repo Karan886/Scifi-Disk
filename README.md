@@ -1,31 +1,39 @@
-# Sci-fi Disk 
+<h1>Sci-fi Disk: Android Game</h1> 
+<ul>
+<li>Sci-fi disk is a <b><em>single player</em> platform based game</b> built for Android.</li>
+<li>The <b>objective</b> of the game is to keep the disk floating by <em>tapping</em> on the screen.</li>
+<li>When the player taps the screen, the disk uses fuel(energy) to float.</li>
+<li>The game is <em>lost</em> when the <b>fuel/energy</b> meter is depleted or the disk <em>collides</em> to any platform.</li> 
+<li><em>Bouncing</em> on a <b>platform</b> is allowed.</li>
+<li>There are 2 options to regain <em><b>fuel/energy:</b></em></li> 
+<ol>
+<li>collecting health boxes that appear on the bricked platforms.</li>
+<li>bouncing on rooftop platforms <em><b>3 times</b></em> in <em><b>3 seconds.</b></em></li>
+</ol>
+<li>Option 2 is preferred because there are more rooftop platforms than health boxes.</li>
+</ul>
 
-- Sci-fi disk is a single player platform based game built for Android.
-- The objective of the game is to keep the disk floating by tapping on the screen.
-- When the player taps the screen, the disk uses fuel(energy) to float.
-- The game is lost when the fuel/energy meter is depleted or the disk collides to any platform. 
-- Bouncing on a platform is allowed.
-- There are 2 options to regain fuel/energy: 
-    1. collecting health boxes that appear on the bricked platforms
-    2. bouncing on rooftop platforms 3 times in 3 seconds. 
-- Option 2 is preferred because there are more rooftop platforms than health boxes.
+<hr/>
 
-## Motivation:
+<h2>Compiling and Testing</h2>
+<ol>
+<li>Download and install <cite><a href="https://coronalabs.com">Corona SDK.</a></cite></li>
+<li>Clone the <em><b>repository</b></em>, you may choose to remove all icon images from the cloned folder but <em><b>building onto the device</b></em> may require them.</li>
+<li>
+Open Corona SDK (you may have to make a <em>free account</em>) and select the <strong>Open Project</strong> option.
+</li>
+<li>Navigate to <strong>./main.lua</strong> this will fire up the <em><b>Corona Simulator</b></em>, and you can test the game.</li>
+<li>Since this app is developed for android devices, please make sure that your hardware is set to an android device. You can do this by navigating to the toolbar and select <em><b>Window > View As > <Android Device>"</b></em></li>
+</ol>
 
- The Flappy Bird game style is the most common in platform-based games. There are many other game styles that have not been developed and this project explores the undeveloped game styles to create a unique game.
- Although there is a desire to combine elements of platformers and other genres (eg. grid games) to this game, adding more game mechanics may not improve user experience as the bounce mechanics already attracts user's attention.
- 
-## Compiling and Testing:
- 
-  - This game is built on Corona SDK which can be downloaded at: https://coronalabs.com/
-  - Issues may occur when using the latest version of Corona SDK on OSX, please visit the attached link for more information: https://coronalabs.com/blog/2014/09/23/os-x-mavericks-10-9-5-and-corona-sdk/
-  - Enjoy the game!!
+<hr/>
 
-## Notes:
-
-  - The game requires iterative development(s) before releasing to the Play Store.
-  - An alpha test reveals that the game interface is sometimes bland - More visuals and artworks need to be introduced.
-  - A traditional coin collection mechanism improves the bland game interface. This component is considered as a last resort.
-  - The game needs to add a distance counter and a score system to keep users motivated and interested in the game.  
-  
+<h2>Notes</h2>
+<ul>
+<li>An <em>alpha test</em> reveals that the game interface is sometimes <em>bland</em> - More visuals and artworks need to be introduced.</li>
+<li>
+A traditional coin collection mechanism can serve as a solution to the the <em>bland</em> game interface. However, This component is considered as a last resort - just because it is very <em>common</em> in other games.
+</li>
+<li>The game needs to add a distance counter and a score system to keep users <b>motivated</b> and <b>interested</b> in the game.</li> 
+</ul>
   
