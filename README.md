@@ -16,7 +16,7 @@
 <hr/>
 
 <h2>Demos and Screenshots</h2>
-<div align="left">
+<div>
 <img width="390px" height="250px" src="https://github.com/Karan886/Scifi-Disk/blob/master/Demo/Capture%2B_2018-06-04-20-21-12.png"/>
 </div>
 <div align="right">
